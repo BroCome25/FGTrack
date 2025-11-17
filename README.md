@@ -7,7 +7,6 @@
 </div>
 
 ## 说明
-* 本项目基于OSTrack,参考https://github.com/botaoye/OSTrack
 * 如有问题可提issue或联系aqizhoua@shu.edu.cn
 
 ## 引用
