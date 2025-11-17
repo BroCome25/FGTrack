@@ -506,7 +506,7 @@ class FGTrack(nn.Module):
 def build_fgtrack(cfg, training=True):
     current_dir = os.path.dirname(os.path.abspath(__file__))  # This is your Project Root
     pretrained_path = os.path.join(current_dir, '../../../pretrained_models')
-    if cfg.MODEL.PRETRAIN_FILE and ('fgtrack' not in cfg.MODEL.PRETRAIN_FILE and 'DropTrack' not in cfg.MODEL.PRETRAIN_FILE) and training:
+    if cfg.MODEL.PRETRAIN_FILE and ('FGTrack' not in cfg.MODEL.PRETRAIN_FILE and 'DropTrack' not in cfg.MODEL.PRETRAIN_FILE) and training:
         pretrained = os.path.join(pretrained_path, cfg.MODEL.PRETRAIN_FILE)
     else:
         pretrained = ''
@@ -555,7 +555,7 @@ def build_fgtrack(cfg, training=True):
         update_interval=cfg.TEST.UPDATE_INTERVAL
     )
 
-    if ('fgtrack' in cfg.MODEL.PRETRAIN_FILE or 'DropTrack' in cfg.MODEL.PRETRAIN_FILE) and training:
+    if ('FGTrack' in cfg.MODEL.PRETRAIN_FILE or 'DropTrack' in cfg.MODEL.PRETRAIN_FILE) and training:
         pretrained_path = os.path.join(current_dir, '../../../pretrained_models', cfg.MODEL.PRETRAIN_FILE)
         checkpoint = torch.load(pretrained_path, map_location="cpu")
         missing_keys, unexpected_keys = model.load_state_dict(checkpoint["net"], strict=False)
