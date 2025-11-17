@@ -3,7 +3,7 @@
 **Fine-grained visual tracking via distribution-aware mask modeling and temporal propagation**
 
 <div align="left">
-  <img src="https://github.com/BroCome25/FGTrack/blob/main/arch.png" width="60%">
+  <img src="https://github.com/BroCome25/FGTrack/blob/main/arch.png" width="90%">
 </div>
 
 ## 说明
